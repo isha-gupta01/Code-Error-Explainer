@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
     contexts: ["selection"]
   });
 });
-const BACKEND_URL = "http://localhost:3000"; // your running API
+const BACKEND_URL = "https://code-error-explainer.onrender.com"; // your running API
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "explainError" && info.selectionText) {
