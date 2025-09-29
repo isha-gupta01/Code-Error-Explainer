@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Error Explainer",
+  "version": "1.0",
+  "description": "Explain errors with Gemini",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
