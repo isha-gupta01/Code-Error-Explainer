@@ -9,10 +9,11 @@ const ai = new GoogleGenAI({
 
 export async function getErrorExplanationGen(errorMessage: string) {
     try {
-        const prompt = `Explain this code error in simple terms in 5-6 lines:
+        const prompt = `Explain this code error in simple and human readable form in 4 lines:
 Error: ${errorMessage}
 
 Format:
+Language:
 Category:
 Explanation:
 Fix:

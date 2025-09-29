@@ -7,10 +7,10 @@ app.use(cors())
 app.use(express.json());
 
 app.post("/explain", async (req, res) => {
-  const { error } = req.body;
+  const { errorMessage } = req.body;
 
   try {
-    const explanation = await getErrorExplanationGen(error);
+    const explanation = await getErrorExplanationGen(errorMessage);
 
     // If Gemini returns empty or undefined
     if (!explanation || explanation.includes("Failed to generate")) {
@@ -30,4 +30,5 @@ app.post("/explain", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("API running at http://localhost:3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
