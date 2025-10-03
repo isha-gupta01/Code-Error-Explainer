@@ -1,5 +1,5 @@
 import express from "express";
-import { getErrorExplanationGen } from "./geminiClient.js";
+import { getErrorExplanationGen } from "../geminiClient.js";
 import cors from "cors";
 
 const app = express();

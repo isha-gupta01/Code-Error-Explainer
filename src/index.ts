@@ -1,7 +1,7 @@
 import { program } from "commander";
 import chalk from "chalk";
 import ora from "ora";
-import {getErrorExplanationGen} from "./geminiClient.js"
+import {getErrorExplanationGen} from "../geminiClient.js"
 
 (async () => {
   try {
